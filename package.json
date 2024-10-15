@@ -7,6 +7,17 @@
 	"files": [
 		"dist"
 	],
+	"keywords": [
+		"React",
+		"Library",
+		"Components",
+		"Diego Tech",
+		"Diego Teileche",
+		"React Components Library"
+	],
+	"author": {
+		"name": "Diego Teileche | Diego Tech"
+	},
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
