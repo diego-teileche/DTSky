@@ -1,0 +1,98 @@
+.loader
+  position: relative
+  width: var(--size, 200px)
+  height: var(--size, 200px)
+  background: var(--bg, #1a1a1f)
+  display: flex
+  justify-content: center
+  align-items: center
+  color: var(--textColor, #f0f0f0)
+  transition: .5s
+  overflow: hidden
+
+  &:hover
+    background: var(--loaderColor, #03e9f4)
+    color: var(--hover-textColor, #050801)
+    box-shadow: 0 0 5px var(--loaderColor, #03e9f4), 0 0 25px var(--loaderColor, #03e9f4), 0 0 50px var(--loaderColor, #03e9f4), 0 0 200px var(--loaderColor, #03e9f4)
+
+.loader span
+  position: absolute
+  display: block
+
+  &:nth-child(1)
+    top: 0
+    left: -100%
+    width: 100%
+    height: 5px
+    background: linear-gradient(90deg, transparent, var(--loaderColor, #03e9f4))
+    animation: animate1 2s linear infinite
+    animation-delay: 0s
+
+  &:nth-child(2)
+    top: -100%
+    right: 0
+    width: 5px
+    height: 100%
+    background: linear-gradient(180deg, transparent, var(--loaderColor, #03e9f4))
+    animation: animate2 2s linear infinite
+    animation-delay: .5s
+  
+  &:nth-child(3)
+    bottom: 0
+    right: -100%
+    width: 100%
+    height: 5px
+    background: linear-gradient(270deg, transparent, var(--loaderColor, #03e9f4))
+    animation: animate3 2s linear infinite
+    animation-delay: 1s
+
+  &:nth-child(4)
+    bottom: -100%
+    left: 0
+    width: 5px
+    height: 100%
+    background: linear-gradient(360deg, transparent, var(--loaderColor, #03e9f4))
+    animation: animate4 2s linear infinite
+    animation-delay: 1.5s
+
+@keyframes animate1
+  0%
+    left: -100%
+  50%, 100%
+    left: 100%
+
+@keyframes animate2
+  0%
+    top: -100%
+  50%, 100%
+    top: 100%
+
+@keyframes animate3
+  0%
+    right: -100%
+  50%, 100%
+    right: 100%
+
+@keyframes animate4
+  0%
+    bottom: -100%
+  50%, 100%
+    bottom: 100%
+
+.loader h3
+  color: var(--loaderColor, #03e9f4)
+  overflow: hidden
+  letter-spacing: var(--tracking, 2px)
+  border-right: 1px solid var(--loaderColor, #03e9f4)
+  transition: .5s
+  animation: typing 5s steps(10) infinite
+
+.loader:hover h3
+  color: var(--hover-textColor, #050801)
+  border-right: 1px solid var(--hover-textColor, #050801)
+
+@keyframes typing
+  0%, 90%, 100%
+    width: 0px
+  30%, 60%
+    width: var(--typingEffect-width, 100.89px)

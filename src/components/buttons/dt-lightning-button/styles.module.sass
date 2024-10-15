@@ -1,0 +1,81 @@
+.button
+  position: relative
+  display: inline-block
+  padding: var(--p, 25px 30px)
+  color: var(--color, #fff)
+  text-decoration: none
+  text-transform: uppercase
+  transition: 0.5s
+  letter-spacing: var(--tracking, 4px)
+  overflow: hidden
+  border: .1px solid var(--borderColor, #222)
+
+  &:hover
+    background-color: var(--layerColor, #03e9f4)
+    color: var(--hoverColor, #050801)
+    border: none
+    box-shadow: 0 0 5px var(--layerColor, #03e9f4), 0 0 25px var(--layerColor, #03e9f4), 0 0 50px var(--layerColor, #03e9f4), 0 0 100px var(--layerColor, #03e9f4)
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0003)
+
+.button span
+  position: absolute
+  display: block
+
+.button span:nth-child(1)
+  top: 0
+  left: 0
+  width: 100%
+  height: 8px
+  background: linear-gradient(90deg, transparent, var(--layerColor, #03e9f4))
+  animation: animate1 2s linear infinite
+
+@keyframes animate1
+  0%
+    left: -100%
+  50%, 100%
+    left: 100%
+
+.button span:nth-child(2)
+  top: -100%
+  right: 0
+  width: 2px
+  height: 100%
+  background: linear-gradient(180deg, transparent, var(--layerColor, #03e9f4))
+  animation: animate2 2s linear infinite
+  animation-delay: 0.25s
+
+@keyframes animate2
+  0%
+    top: -100%
+  50%, 100%
+    top: 100%
+
+.button span:nth-child(3)
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 2px
+  background: linear-gradient(270deg, transparent, var(--layerColor, #03e9f4))
+  animation: animate3 2s linear infinite
+  animation-delay: 0.5s
+
+@keyframes animate3
+  0%
+    right: -100%
+  50%, 100%
+    right: 100%
+
+.button span:nth-child(4)
+  bottom: -100%
+  left: 0
+  width: 2px
+  height: 100%
+  background: linear-gradient(360deg, transparent, var(--layerColor, #03e9f4))
+  animation: animate4 2s linear infinite
+  animation-delay: 0.75s
+
+@keyframes animate4
+  0%
+    bottom: -100%
+  50%, 100%
+    bottom: 100%

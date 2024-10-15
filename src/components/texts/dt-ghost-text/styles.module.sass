@@ -1,0 +1,22 @@
+h1
+  position: absolute
+  margin: 0
+  padding: 0
+  color: #fff
+  font-size: 100px
+  transform: translate(-50%, -50%)
+  animation: morph-effect 5s ease-in-out infinite
+
+h1:first-child
+  animation-delay: -5s
+
+h1:last-child
+  animation-delay: -2.5s
+
+@keyframes morph-effect
+  0%, 20%, 100%
+    filter: blur(0)
+    opacity: 1
+  40%, 80%
+    filter: blur(16px)
+    opacity: 0

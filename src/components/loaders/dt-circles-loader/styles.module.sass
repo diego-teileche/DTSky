@@ -1,0 +1,41 @@
+.loader
+  position: absolute
+  transform: translate(-50%, -50%)
+  width: var(--size, 100px)
+  height: var(--size, 100px)
+
+.loader .span
+  position: absolute
+  border: 0
+  width: 40%
+  height: 40%
+  border-radius: 50%
+  animation: spin 2s ease infinite
+  transition: all 1s cubic-bezier(.68, -.55, .265, 1.55)
+
+.loader .span1
+  background: var(--circle1, #216ad6)
+  animation-delay: -1.5s
+
+.loader .span2
+  background: var(--circle2, #ffd960)
+  animation-delay: -1s
+
+.loader .span3
+  background: var(--circle3, #d7415d)
+  animation-delay: -0.5s
+
+.loader .span4
+  background: var(--circle4, #1f95f2)
+
+@keyframes spin 
+  0%
+    transform: translate(0) scale(0)
+  25%
+    transform: translate(200%) scale(1.5)
+  50% 
+    transform: translate(200%, 200%) scale(0)
+  75%
+    transform: translate(0, 200%) scale(1.5)
+  100%
+    transform: translate(0) scale(0)

@@ -1,0 +1,40 @@
+.alien
+  position: relative
+  background: #252525
+  width: var(--size, 100px)
+  height: var(--size, 100px)
+  transform: rotate(45deg)
+  border-top-left-radius: calc( var(--size, 100px) * 0.67 )
+  border-bottom-left-radius: calc( var(--size, 100px) * 0.67 )
+  border-bottom-right-radius: calc( var(--size, 100px) * 0.167 )
+  border-top-right-radius: calc( var(--size, 100px) * 0.67 )
+  box-shadow: 0 0 15px 15px rgba(0,0,0,.5)
+  transition: .2s
+
+  &::before
+    content: ''
+    position: absolute
+    width: calc( var(--size, 100px) * 0.27 )
+    height: calc( var(--size, 100px) * 0.27 )
+    background-color: #0b0b0b
+    border-top-left-radius: calc( var(--size, 100px) * 0.67 )
+    border-bottom-right-radius: calc( var(--size, 100px) * 0.67 )
+    top: calc( var(--size, 100px) * 0.67 )
+    left: calc( var(--size, 100px) * 0.34 )
+    transform: rotate(45deg)
+
+  &::after
+    content: ''
+    position: absolute
+    width: calc( var(--size, 100px) * 0.27 )
+    height: calc( var(--size, 100px) * 0.27 )
+    background-color: #0b0b0b
+    border-top-left-radius: calc( var(--size, 100px) * 0.67 )
+    border-bottom-right-radius: calc( var(--size, 100px) * 0.67 )
+    top: calc( var(--size, 100px) * 0.34 )
+    left: calc( var(--size, 100px) * 0.67 )
+    transform: rotate(-45deg)
+
+  &:hover
+    background: radial-gradient(circle, #a2f793, #58f03e)
+    box-shadow: 0 0 5px 5px rgba(0,0,0,.5), 0 0 20px 20px rgba(88, 240, 62, .4)

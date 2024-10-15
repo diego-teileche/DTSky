@@ -1,0 +1,41 @@
+.loader
+  position: relative
+  width: var(--size, 100px)
+  height: var(--size, 100px)
+
+.loader span
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  transform: rotate(calc(36deg * var(--i)))
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: calc( var(--size, 100px) * 0.0834 )
+    height: calc( var(--size, 100px) * 0.0834 )
+    border-radius: 50%
+    background: transparent
+    border: calc( var(--size, 100px) * 0.0134 ) solid #00efff
+    box-sizing: border-box
+    box-shadow: 0 0 calc( var(--size, 100px) * 0.0667 ) #00efff, calc( var(--size, 100px) * -0.1 ) calc( var(--size, 100px) * -0.1 ) 0 #00efff, calc( var(--size, 100px) * -0.1 ) calc( var(--size, 100px) * -0.1 ) calc( var(--size, 100px) * 0.0667 ) #00efff, calc( var(--size, 100px) * 0.1 ) calc( var(--size, 100px) * 0.1 ) 0 #00efff, calc( var(--size, 100px) * 0.1 ) calc( var(--size, 100px) * 0.1 ) calc( var(--size, 100px) * 0.0667 ) #00efff, calc( var(--size, 100px) * 0.1 ) calc( var(--size, 100px) * -0.1 ) 0 #00efff, calc( var(--size, 100px) * 0.1 ) calc( var(--size, 100px) * -0.1 ) calc( var(--size, 100px) * 0.0667 ) #00efff, calc( var(--size, 100px) * -0.1 ) calc( var(--size, 100px) * 0.1 ) 0 #00efff, calc( var(--size, 100px) * -0.1 ) calc( var(--size, 100px) * 0.1 ) calc( var(--size, 100px) * 0.0667 ) #00efff
+    animation: animate 5s linear infinite
+    animation-delay: calc(-0.25s * var(--i))
+    transform-origin: calc( var(--size, 100px) * 0.0667 )
+    transition: 2s
+
+.loader:hover span::before
+  box-shadow: 0 0 calc( var(--size, 100px) * 0.0667 ) #00efff, calc( var(--size, 100px) * -0.667 ) calc( var(--size, 100px) * -0.667 ) 0 #00efff, calc( var(--size, 100px) * -0.667 ) calc( var(--size, 100px) * -0.667 ) calc( var(--size, 100px) * 0.0667 ) #00efff, calc( var(--size, 100px) * 0.6 ) calc( var(--size, 100px) * 0.6 ) 0 #00efff, calc( var(--size, 100px) * 0.6 ) calc( var(--size, 100px) * 0.6 ) calc( var(--size, 100px) * 0.0667 ) #00efff, calc( var(--size, 100px) * 0.6 ) calc( var(--size, 100px) * -0.667 ) 0 #00efff, calc( var(--size, 100px) * 0.6 ) calc( var(--size, 100px) * -0.667 ) calc( var(--size, 100px) * 0.0667 ) #00efff, calc( var(--size, 100px) * -0.667 ) calc( var(--size, 100px) * 0.6 ) 0 #00efff, calc( var(--size, 100px) * -0.667 ) calc( var(--size, 100px) * 0.6 ) calc( var(--size, 100px) * 0.0667 ) #00efff
+  transform-origin: calc( var(--size, 100px) * 0.8334 )
+
+@keyframes animate
+  0%
+    transform: rotate(0deg)
+    filter: hue-rotate(0deg)
+  100%
+    transform: rotate(360deg)
+    filter: hue-rotate(360deg)

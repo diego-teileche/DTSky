@@ -1,0 +1,29 @@
+.cards
+  display: flex
+  width: 100%
+  padding: 50px
+
+.cards .card
+  background-color: var(--bg, #0090ff)
+  color: #fff
+  width: calc( var(--size, 150px) * 0.858 )
+  height: var(--size, 150px)
+  border-radius: var(--rounded, 10px)
+  padding: var(--p, 30px)
+  box-sizing: border-box
+  position: relative
+  display: flex
+  flex-direction: column
+  transition: all 0.3s ease
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3), -4px 0 10px rgba(0,0,0,0.2), -5px 0 10px rgba(0,0,0,0.1)
+
+  &:hover
+    margin-right: calc( var(--size, 150px) * 0.229 )
+    transform: rotate(3deg) translateY(calc( var(--size, 150px) * -0.043 ))
+
+.cards .element
+  margin-left: calc( var(--size, 150px) * -0.286 )
+
+.element-1:hover,
+.element-2:hover
+  margin-left: calc( var(--size, 150px) * -0.372 )

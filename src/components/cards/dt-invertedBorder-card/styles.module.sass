@@ -1,0 +1,76 @@
+.card
+  position: relative
+  width: calc(var(--size, 200px) * 0.8)
+  height: var(--size, 200px)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.card .imgBx
+  position: relative
+  width: 100%
+  height: calc(var(--size, 200px) * 0.6)
+  border-radius: calc( var(--size, 200px) * 0.0375 )
+  background: var(--upBg, #09f)
+  background-size: cover
+
+  &::before
+    content: ''
+    position: absolute
+    bottom: calc(var(--size, 200px) * -0.026)
+    left: 50%
+    width: calc(var(--size, 200px) * 0.0625)
+    height: calc(var(--size, 200px) * 0.0625)
+    border-radius: 50%
+    background: transparent
+    box-shadow: calc(var(--size, 200px) * -0.025) calc(var(--size, 200px) * 0.035) 0 #232949
+    z-index: 2
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: calc(var(--size, 200px) * 0.175)
+    left: 0
+    width: calc(var(--size, 200px) * 0.0625)
+    height: calc(var(--size, 200px) * 0.0625)
+    border-radius: 50%
+    background: transparent
+    box-shadow: calc(var(--size, 200px) * -0.025) calc(var(--size, 200px) * 0.025) 0 #fff
+
+.card .content
+  position: relative
+  width: 100%
+  height: calc(var(--size, 200px) * 0.375)
+  background: var(--downBg, #232949)
+  border-radius: calc( var(--size, 200px) * 0.0375 )
+  border-top-left-radius: 0
+
+.card .content .price
+  position: absolute
+  top: calc(var(--size, 200px) * -0.2)
+  height: calc(var(--size, 200px) * 0.2)
+  width: 50%
+  background: var(--downBg, #232949)
+  border-top: calc(var(--size, 200px) * 0.025) solid #fff
+  border-right: calc(var(--size, 200px) * 0.025) solid #fff
+  border-top-right-radius: calc(var(--size, 200px) * 0.0625)
+
+  &::before
+    content: ''
+    position: absolute
+    width: calc(var(--size, 200px) * 0.0625)
+    height: calc(var(--size, 200px) * 0.0625)
+    background: transparent
+    border-radius: 50%
+    box-shadow: calc(var(--size, 200px) * -0.025) calc(var(--size, 200px) * -0.025) 0 #fff
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: calc(var(--size, 200px) * 0.05)
+    right: calc(var(--size, 200px) * -0.0825)
+    width: calc(var(--size, 200px) * 0.0575)
+    height: calc(var(--size, 200px) * 0.0575)
+    background: transparent
+    border-radius: 50%
+    box-shadow: calc(var(--size, 200px) * -0.025) calc(var(--size, 200px) * 0.025) 0 #fff

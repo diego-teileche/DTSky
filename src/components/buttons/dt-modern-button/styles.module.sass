@@ -1,0 +1,36 @@
+.button
+  position: relative
+  text-decoration: none
+  color: var(--color, #f0f0f0)
+  background: linear-gradient(45deg, var(--gradient1, #0ce39a), var(--gradient2, #69007f), var(--gradient3, #fc0987))
+  padding: var(--p, 14px 25px)
+  border-radius: var(--rounded, 10px)
+  font-size: var(--fontSize, 1em)
+
+  &::before
+    content: ''
+    position: absolute
+    inset: 1px
+    background: var(--bg, #151515)
+    border-radius: calc(var(--rounded, 10px) - 1px)
+    transition: .5s
+
+  &:hover::before
+    opacity: .7
+
+  &::after
+    content: ''
+    position: absolute
+    inset: 1px
+    background: linear-gradient(45deg, var(--gradient1, #0ce39a), var(--gradient2, #69007f), var(--gradient3, #fc0987))
+    border-radius: calc(var(--rounded, 10px) - 1px)
+    transition: .5s
+    opacity: 0
+    filter: blur(20px)
+
+  &:hover::after
+    opacity: 1
+
+.button span
+  position: relative
+  z-index: 1

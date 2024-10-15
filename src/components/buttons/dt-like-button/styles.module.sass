@@ -1,0 +1,61 @@
+.container
+  position: absolute
+  transform: translate(-50%, -50%)
+  transition: all 1s
+  width: var(--containerSize, 50px)
+  height: var(--containerSize, 50px)
+  background: #b1b2cf
+  border-radius: var(--rounded, 25px)
+  border: 4px solid #b1b2cf
+  padding: 5px
+  box-shadow: 0 0 15px var(--shadow, #686ffd)
+
+.button
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: var(--bg, #2b3241)
+  border-radius: var(--rounded, 25px)
+  transition: all 1s
+
+  &:hover
+    width: var(--hoverWidth, 150px)
+    cursor: pointer
+
+  &:hover svg
+    transform: rotate(360deg)
+
+h1
+  color: var(--textColor, #f0f0f0)
+  position: absolute
+  left: var(--textLeft, 30%)
+  top: 50%
+  transform: translate(-50%, -50%)
+  font-size: var(--text-fontSize, 1.5em)
+  width: 100%
+  margin: auto
+  transition: all 1s
+  opacity: 0
+
+svg
+  padding: var(--like-p, 10px)
+  width: var(--likeSize, 42.5px)
+  height: var(--likeSize, 42.5px)
+  position: absolute
+  top: 0
+  right: 0
+  color: var(--likeColor, #686ffd)
+  text-align: center
+  font-size: var(--like-fontSize, 1.2em)
+  transition: all 1s
+
+.button:hover h1
+  animation: 2s display forwards
+
+@keyframes display
+  from
+    opacity: 0
+  to
+    opacity: 1

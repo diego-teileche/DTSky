@@ -1,0 +1,51 @@
+.cubeBox
+  display: flex
+  justify-content: center
+  align-items: center
+  width: var(--size, 700px)
+  height: var(--size, 700px)
+  overflow: hidden
+
+.container
+  position: relative
+  width: 100%
+  transform: rotate(-35deg)
+
+.container .box
+  position: relative
+  left: calc( var(--size, 700px) * -0.286 )
+  display: flex
+  justify-content: center
+  align-items: center
+  width: calc(100% + calc( var(--size, 700px) * 0.572 ))
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004)
+  animation: animateSurface 1.5s ease-in-out infinite
+
+@keyframes animateSurface
+  0%
+    transform: translateX(0deg)
+  100%
+    transform: translateX(calc( var(--size, 700px) * -0.286 ))
+
+.container .box .cube
+  position: relative
+  width: calc( var(--size, 700px) * 0.286 )
+  height: calc( var(--size, 700px) * 0.286 )
+  background: rgb(3, 233, 244)
+  box-shadow: 0 0 5px rgba(3, 233, 244, 1), 0 0 25px rgba(3, 233, 244, 1), 0 0 50px rgba(3, 233, 244, 1), 0 0 100px rgba(3, 233, 244, 1), 0 0 200px rgba(3, 233, 244, 0.5), 0 0 300px rgba(3, 233, 244, 0.5)
+  transform-origin: bottom right
+  animation: animate 1.5s ease-in-out infinite
+
+@keyframes animate
+  0%
+    transform: rotate(0deg)
+  60%
+    transform: rotate(90deg)
+  65%
+    transform: rotate(85deg)
+  70%
+    transform: rotate(90deg)
+  75%
+    transform: rotate(87.5deg)
+  80%, 100%
+    transform: rotate(90deg)

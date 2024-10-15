@@ -1,0 +1,43 @@
+.box
+  position: relative
+  width: calc( var(--size, 200px) * 0.75 )
+  height: var(--size, 200px)
+  background: rgba(0,0,0,0.75)
+  border-radius: var(--rounded, 20px)
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+
+  &::after
+    content: ''
+    position: absolute
+    width: calc( var(--size, 200px) * 1.25 )
+    height: calc( var(--size, 200px) * 1.25 )
+    background-image: conic-gradient(transparent, transparent, transparent, #0cf)
+    animation: animate 4s linear infinite
+
+  &::before
+    content: ''
+    position: absolute
+    width: calc( var(--size, 200px) * 1.25 )
+    height: calc( var(--size, 200px) * 1.25 )
+    background-image: conic-gradient(transparent, transparent, transparent, #d400d4)
+    animation: animate 4s linear infinite
+    animation-delay: -2s
+
+@keyframes animate
+  0% 
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+.box span
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  inset: var(--inset, 5px)
+  border-radius: calc( var(--rounded, 20px) - var(--inset, 5px) )
+  background: var(--bg, #0c1022)
+  z-index: 1

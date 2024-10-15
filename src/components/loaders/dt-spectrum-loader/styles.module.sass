@@ -1,0 +1,56 @@
+.container
+  position: relative
+  width: 100%
+  height: var(--h, 80px)
+  display: flex
+  justify-content: center
+  align-items: center
+
+.container .loader
+  position: absolute
+  width: var(--h, 80px)
+  height: var(--h, 80px)
+  border-radius: 50%
+  animation: animate 2s linear infinite
+
+  &:nth-child(2), &:nth-child(4)
+    animation-delay: -1s
+    filter: hue-rotate(290deg)
+
+  &:nth-child(1)::before, &:nth-child(2)::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 50%
+    height: 100%
+    background: linear-gradient(to top, transparent, var(--color, rgba(0, 255, 249, 0.4)))
+    background-size: calc(var(--h, 80px) * 0.5) calc(var(--h, 80px) * 0.9)
+    background-repeat: no-repeat
+    border-top-left-radius: calc( var(--h, 80px) * 0.5 )
+    border-bottom-left-radius: calc( var(--h, 80px) * 0.5 )
+    
+@keyframes animate
+  0%
+    transform: rotate(0deg)
+  100% 
+    transform: rotate(360deg)
+
+.container .loader i
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  width: calc( var(--h, 80px) * 0.1 )
+  height: calc( var(--h, 80px) * 0.1 )
+  background: var(--pointColor, #00fff9)
+  border-radius: 50%
+  z-index: 100
+  box-shadow: 0 0 10px var(--pointColor, #00fff9), 0 0 20px var(--pointColor, #00fff9), 0 0 30px var(--pointColor, #00fff9), 0 0 40px var(--pointColor, #00fff9), 0 0 50px var(--pointColor, #00fff9), 0 0 60px var(--pointColor, #00fff9), 0 0 70px var(--pointColor, #00fff9), 0 0 80px var(--pointColor, #00fff9), 0 0 90px var(--pointColor, #00fff9), 0 0 100px var(--pointColor, #00fff9)
+
+.container .loader span
+  position: absolute
+  inset: calc( var(--h, 80px) * 0.1 )
+  background: var(--insetBg, #0f0f0f)
+  border-radius: 50%
+  z-index: 1

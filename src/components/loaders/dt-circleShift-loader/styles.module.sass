@@ -1,0 +1,58 @@
+.loader
+  position: absolute
+  display: inline-block
+  transform: translate(-50%, -50%) rotate(-90deg) scale(4)
+
+.loader span
+  position: relative
+  display: block
+  height: calc(var(--circleSize, 10px) * 5.8)
+  width: 2px
+  margin-top: calc(var(--circleSize, 10px) * -4.6 )
+  background: transparent
+  animation: animate 2s linear infinite
+
+  &::before, &::after
+    content: ''
+    height: var(--circleSize, 10px)
+    width: var(--circleSize, 10px)
+    position: absolute
+    border-radius: 50%
+    transform: translateX(-50%)
+    box-shadow: 0 0 2px rgba(0,0,0,1)
+
+  &::before
+    top: 0
+
+  &::after
+    bottom: 0
+
+  &:nth-child(1)::before, &:nth-child(1)::after
+    background: var(--circle1, #ff0)
+
+  &:nth-child(2)::before, &:nth-child(2)::after
+    background: var(--circle2, #ff24a8)
+
+  &:nth-child(3)::before, &:nth-child(3)::after
+    background: var(--circle3, #0f0)
+
+  &:nth-child(4)::before, &:nth-child(4)::after
+    background: var(--circle4, #2196f3)
+
+  &:nth-child(1)
+    animation-delay: 0s
+
+  &:nth-child(2)
+    animation-delay: 0.5s
+
+  &:nth-child(3)
+    animation-delay: 1s
+
+  &:nth-child(4)
+    animation-delay: 1.5s
+
+@keyframes animate
+  0%, 75%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(180deg)

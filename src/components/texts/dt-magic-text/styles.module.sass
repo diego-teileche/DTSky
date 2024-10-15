@@ -1,0 +1,20 @@
+.container
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+
+.h1
+  font-size: var(--fontSize, 100px)
+  animation: background-pan 2s linear infinite
+  background: linear-gradient(to right, rgb(123, 31, 162), rgb(103, 58, 183), rgb(244, 143, 177), rgb(123, 31, 162))
+  background-size: 200%
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  white-space: nowrap
+
+@keyframes background-pan 
+  from 
+    background-position: 0% center
+  to 
+    background-position: -200% center

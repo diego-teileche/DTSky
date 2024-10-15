@@ -1,0 +1,68 @@
+.box
+  position: relative
+  display: flex
+  justify-content: center
+
+.box span
+  position: absolute
+  width: calc( var(--size, 100px) * 0.049 )
+  height: var(--size, 100px)
+  background: transparent
+  border-bottom: calc( var(--size, 100px) * 0.193 ) solid #222
+  transform-origin: bottom
+  transform: rotate(calc(22.5deg * var(--i)))
+
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: calc( var(--size, 100px) * 0.241  )
+    background: #03a9f4
+    box-shadow: 0px 0px 20px #03a9f4
+    border-radius: 10px
+    animation: animate 1.5s linear infinite
+    animation-delay: calc(.1s * var(--i))
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    width: calc( var(--size, 100px) * 0.097 )
+    height: calc( var(--size, 100px) * 0.049 )
+    background: #03a9f4
+    transform: rotate(8deg)
+    animation: animateColor 1.5s linear infinite
+
+@keyframes animate
+  0%
+    transform: translateY(calc( var(--size, 100px) * 0.722 )) rotate(0deg)
+    filter: hue-rotate(0deg)
+  50%
+    transform: translateY(0px)
+  100%
+    transform: translateY(calc( var(--size, 100px) * 0.722 )) rotate(360deg)
+    filter: hue-rotate(360deg)
+
+@keyframes animateColor
+  0%
+    filter: hue-rotate(0deg)
+  100%
+    filter: hue-rotate(360deg)
+
+.box span i
+  position: absolute
+  width: calc( var(--size, 100px) * 0.073 )
+  height: calc( var(--size, 100px) * 0.48 )
+  background: #222
+  border-left: 1px solid #03a9f4
+  border-right: 1px solid #03a9f4
+  transform-origin: top
+  transform: rotate(80deg)
+  animation: animateColor 1.5s linear infinite, animateSide 1.5s linear infinite
+  animation-delay: calc(.1s * var(--i))
+
+@keyframes animateSide
+  0%, 40%, 65.1%, 100%
+    background: #222
+  40.1%, 65%
+    background: #03a9f4

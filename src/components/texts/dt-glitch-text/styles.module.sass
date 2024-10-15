@@ -1,0 +1,51 @@
+.container
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #fff
+  font-size: var(--fontSize, 100px)
+  letter-spacing: calc( var(--fontSize, 100px) * -0.07 )
+
+.div
+  animation: glitch 1s linear infinite
+
+  &::before,
+  &::after 
+    content: attr(title)
+    position: absolute
+    left: 0
+
+
+  &::before 
+    animation: glitchTop 1s linear infinite
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%)
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%)
+
+  &::after 
+    animation: glitchBottom 1.5s linear infinite
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%)
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%)
+
+@keyframes glitch 
+  2%, 64% 
+    transform: translate(calc( var(--fontSize, 100px) * 0.02 ), 0) skew(0deg)
+  4%, 60% 
+    transform: translate(calc( var(--fontSize, 100px) * -0.02 ), 0) skew(0deg)
+  62% 
+    transform: translate(0, 0) skew(5deg)
+
+@keyframes glitchTop 
+  2%, 64% 
+    transform: translate(calc( var(--fontSize, 100px) * 0.02 ), calc( var(--fontSize, 100px) * -0.02 ))
+  4%, 60% 
+    transform: translate(calc( var(--fontSize, 100px) * -0.02 ), calc( var(--fontSize, 100px) * 0.02 ))
+  62% 
+    transform: translate(calc( var(--fontSize, 100px) * 0.13 ), calc( var(--fontSize, 100px) * -0.01 )) skew(-13deg)
+
+@keyframes glitchBottom
+  2%, 64% 
+    transform: translate(calc( var(--fontSize, 100px) * -0.02 ), 0)
+  4%, 60% 
+    transform: translate(calc( var(--fontSize, 100px) * -0.02 ), 0)
+  62% 
+    transform: translate(calc( var(--fontSize, 100px) * -0.22 ), calc( var(--fontSize, 100px) * 0.05 )) skew(21deg)
