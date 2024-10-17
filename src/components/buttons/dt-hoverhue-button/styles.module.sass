@@ -3,7 +3,7 @@
   display: inline-block
   padding: var(--p, 26px 90px)
 
-.button span
+.button .span
   position: absolute
   top: 0
   left: 0
@@ -29,5 +29,5 @@
   &:nth-child(2):hover
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0% 50%)
 
-.button span:nth-child(1):hover ~ span:nth-child(2)
+.button .span:nth-child(1):hover ~ span:nth-child(2)
   clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%, 100% 50%)

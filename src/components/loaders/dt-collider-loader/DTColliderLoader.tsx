@@ -16,8 +16,12 @@ export const DTColliderLoader = ({ style }: Props) => {
 	return (
 		<div style={style} className={`${styles["box"]}`}>
 			{items.map((i) => (
-				<span key={i} style={{ "--i": i } as CustomStyle}>
-					<i></i>
+				<span
+					key={i}
+					style={{ "--i": i } as CustomStyle}
+					className={`${styles["span"]}`}
+				>
+					<i className={`${styles["i"]}`}></i>
 				</span>
 			))}
 		</div>

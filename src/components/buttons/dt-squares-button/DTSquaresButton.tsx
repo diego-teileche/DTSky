@@ -17,8 +17,8 @@ type Props = Readonly<{
 export const DTSquaresButton = ({ children, href, style }: Props) => {
 	return (
 		<a href={href} style={style} className={`${styles["button"]}`}>
-			<span>{children}</span>
-			<i></i>
+			<span className={`${styles["span"]}`}>{children}</span>
+			<i className={`${styles["i"]}`}></i>
 		</a>
 	)
 }

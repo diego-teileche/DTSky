@@ -16,7 +16,11 @@ export const DTStackedSpectra = ({ style }: Props) => {
 	return (
 		<div style={style} className={`${styles["loader"]}`}>
 			{items.map((i) => (
-				<span key={i} style={{ "--i": i } as CustomStyle}></span>
+				<span
+					key={i}
+					style={{ "--i": i } as CustomStyle}
+					className={`${styles["span"]}`}
+				></span>
 			))}
 		</div>
 	)

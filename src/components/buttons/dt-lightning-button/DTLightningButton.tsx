@@ -19,10 +19,10 @@ type Props = Readonly<{
 export const DTLightningButton = ({ children, href, style }: Props) => {
 	return (
 		<a href={href} style={style} className={`${styles["button"]}`}>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
+			<span className={`${styles["span"]}`}></span>
+			<span className={`${styles["span"]}`}></span>
+			<span className={`${styles["span"]}`}></span>
+			<span className={`${styles["span"]}`}></span>
 			{children}
 		</a>
 	)

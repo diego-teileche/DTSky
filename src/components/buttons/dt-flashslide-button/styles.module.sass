@@ -32,7 +32,7 @@
     transform: translateX(calc( -1 * var(--size, 200px) )) skewX(30deg)
     transition: .75s ease-in-out
 
-.button span
+.button .span
   position: absolute
   left: calc( var(--size, 200px) * 0.025 )
   width: calc( var(--size, 200px) * 0.25 )
@@ -45,11 +45,11 @@
   color: var(--arrow-color, #1a191d)
   transition: .5s ease-in-out
 
-.button span svg
+.button .span .svg
   width: calc( var(--size, 200px) * 0.15 )
   height: calc( var(--size, 200px) * 0.15 )
 
-.button:hover span
+.button:hover .span
   left: calc(100% - calc( var(--size, 200px) * 0.25 + calc( var(--size, 200px) * 0.025 ) ))
 
 .button:hover::after

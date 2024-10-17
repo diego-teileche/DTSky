@@ -16,10 +16,10 @@ type Props = Readonly<{
 export const DTCircleShiftLoader = ({ style }: Props) => {
 	return (
 		<div style={style} className={`${styles["loader"]}`}>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
+			<span className={`${styles["span"]}`}></span>
+			<span className={`${styles["span"]}`}></span>
+			<span className={`${styles["span"]}`}></span>
+			<span className={`${styles["span"]}`}></span>
 		</div>
 	)
 }

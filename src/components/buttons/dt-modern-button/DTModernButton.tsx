@@ -21,7 +21,7 @@ type Props = Readonly<{
 export const DTModernButton = ({ children, href, style }: Props) => {
 	return (
 		<a href={href} style={style} className={`${styles["button"]}`}>
-			<span>{children}</span>
+			<span className={`${styles["span"]}`}>{children}</span>
 		</a>
 	)
 }

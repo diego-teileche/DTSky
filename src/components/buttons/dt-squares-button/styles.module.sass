@@ -21,11 +21,11 @@
     inset: 2px
     background: #27282c
 
-.button span
+.button .span
   position: relative
   z-index: 1
 
-.button i
+.button .i
   position: absolute
   inset: 0
   display: block
@@ -54,12 +54,12 @@
     border: 2px solid var(--bg, #1e9bff)
     transition: .5s
 
-.button:hover i::before
+.button:hover .i::before
   left: 0%
   transform: translateX(-50%) rotate(45deg)
   box-shadow: 33px 33px var(--bg, #1e9bff)
 
-.button:hover i::after
+.button:hover .i::after
   left: 100%
   transform: translateX(-50%) rotate(-45deg)
   box-shadow: 33px -33px var(--bg, #1e9bff)

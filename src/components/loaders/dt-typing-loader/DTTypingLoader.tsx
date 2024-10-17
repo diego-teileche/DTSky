@@ -18,11 +18,11 @@ type Props = Readonly<{
 export const DTTypingLoader = ({ style }: Props) => {
 	return (
 		<div style={style} className={`${styles["loader"]}`}>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<h3>Loading...</h3>
+			<span className={`${styles["span"]}`}></span>
+			<span className={`${styles["span"]}`}></span>
+			<span className={`${styles["span"]}`}></span>
+			<span className={`${styles["span"]}`}></span>
+			<h3 className={`${styles["h3"]}`}>Loading...</h3>
 		</div>
 	)
 }

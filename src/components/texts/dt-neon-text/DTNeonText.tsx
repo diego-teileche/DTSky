@@ -16,7 +16,7 @@ export const DTNeonText = ({ text, style }: Props) => {
 		<div style={style} className={`${styles["box"]}`}>
 			<div className={`${styles["lightbar"]}`}></div>
 			<div className={`${styles["topLayer"]}`}></div>
-			<h2>{text}</h2>
+			<h2 className={`${styles["h2"]}`}>{text}</h2>
 		</div>
 	)
 }

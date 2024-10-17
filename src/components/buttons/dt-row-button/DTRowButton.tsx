@@ -24,8 +24,8 @@ type Props = Readonly<{
 export const DTRowButton = ({ text, href, style }: Props) => {
 	return (
 		<a href={href} style={style} className={`${styles["button"]}`}>
-			<i></i>
-			<span>{text}</span>
+			<i className={`${styles["i"]}`}></i>
+			<span className={`${styles["span"]}`}>{text}</span>
 		</a>
 	)
 }

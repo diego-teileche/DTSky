@@ -16,7 +16,7 @@ type Props = Readonly<{
 export const DTFlashEdgeCard = ({ children, style }: Props) => {
 	return (
 		<div style={style} className={`${styles["box"]}`}>
-			<span>{children}</span>
+			<span className={`${styles["span"]}`}>{children}</span>
 		</div>
 	)
 }

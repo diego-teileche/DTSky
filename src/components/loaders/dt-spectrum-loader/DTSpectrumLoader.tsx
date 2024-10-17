@@ -16,16 +16,16 @@ export const DTSpectrumLoader = ({ style }: Props) => {
 	return (
 		<div style={style} className={`${styles["container"]}`}>
 			<div className={`${styles["loader"]}`}>
-				<span></span>
+				<span className={`${styles["span"]}`}></span>
 			</div>
 			<div className={`${styles["loader"]}`}>
-				<span></span>
+				<span className={`${styles["span"]}`}></span>
 			</div>
 			<div className={`${styles["loader"]}`}>
-				<i></i>
+				<i className={`${styles["i"]}`}></i>
 			</div>
 			<div className={`${styles["loader"]}`}>
-				<i></i>
+				<i className={`${styles["i"]}`}></i>
 			</div>
 		</div>
 	)

@@ -9,7 +9,7 @@
   width: var(--size, 100px)
   height: var(--size, 100px)
 
-.cube div
+.cube .div
   position: absolute
   top: 0
   left: 0
@@ -25,7 +25,7 @@
   100% 
     transform: rotateX(-20deg) rotateY(0)
 
-.cube .big span
+.cube .big .span
   position: absolute
   width: var(--size, 100px)
   height: var(--size, 100px)
@@ -34,12 +34,12 @@
   transform-style: preserve-3d
   transition: .5s
 
-.cube:hover .big span
+.cube:hover .big .span
   background: transparent
   border: calc( var(--size, 100px) * 0.034 ) solid #ffa20d
   filter: drop-shadow(0 0 20px #ffa20d)
 
-.cube .big span.top
+.cube .big .span.top
   transform: rotateX(90deg) translateZ(calc( var(--size, 100px) / 2 ))
 
   &::before
@@ -58,7 +58,7 @@
   left: 50%
   transform: translate(-50%, calc( var(--size, 100px) * -1.334 ))
 
-.cube2 div
+.cube2 .div
   position: absolute
   top: 0
   left: 0
@@ -75,7 +75,7 @@
   100% 
     transform: rotateX(-20deg) rotateY(360deg)
 
-.cube2 .big span
+.cube2 .big .span
   position: absolute
   width: var(--size, 100px)
   height: var(--size, 100px)
@@ -84,12 +84,12 @@
   transform-style: preserve-3d
   transition: .5s
 
-.cube:hover ~ .cube2 .big span
+.cube:hover ~ .cube2 .big .span
   background: transparent
   border: calc( var(--size, 100px) * 0.034 ) solid #fff
   filter: drop-shadow(0 0 20px #fff)
 
-.cube2 .big span.top
+.cube2 .big .span.top
   transform: rotateX(90deg) translateZ(calc( var(--size, 100px) / 2 ))
 
   &::before

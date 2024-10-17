@@ -15,7 +15,7 @@ export const DTInfernoRing = ({ style }: Props) => {
 			<div style={style} className={`${styles["ring-container"]}`}>
 				<div className={`${styles["circle"]}`}></div>
 			</div>
-			<svg>
+			<svg className={`${styles["svg"]}`}>
 				<filter id="wavy">
 					<feTurbulence
 						x="0"

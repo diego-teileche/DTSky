@@ -26,13 +26,14 @@ export const DTLikeButton = ({ text, onClick, style }: Props) => {
 	return (
 		<div style={style} className={`${styles["container"]}`}>
 			<button className={`${styles["button"]}`} onClick={onClick}>
-				<h1>{text}</h1>
+				<h1 className={`${styles["h1"]}`}>{text}</h1>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
 					viewBox="0 0 24 24"
 					strokeWidth={1.5}
 					stroke="currentColor"
+					className={`${styles["svg"]}`}
 				>
 					<path
 						strokeLinecap="round"

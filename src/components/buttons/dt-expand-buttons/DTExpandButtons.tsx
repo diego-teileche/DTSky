@@ -50,35 +50,45 @@ export const DTExpandButtons = ({
 	style,
 }: Props) => {
 	return (
-		<ul style={style}>
-			<li>
-				<a href={href1}>
-					<span className={`${styles["icon"]}`}>{icon1}</span>
-					<span className={`${styles["title"]}`}>{text1}</span>
+		<ul style={style} className={`${styles["ul"]}`}>
+			<li className={`${styles["li"]}`}>
+				<a href={href1} className={`${styles["a"]}`}>
+					<span className={`${styles["icon"]} ${styles["span"]}`}>{icon1}</span>
+					<span className={`${styles["title"]} ${styles["span"]}`}>
+						{text1}
+					</span>
 				</a>
 			</li>
-			<li>
-				<a href={href2}>
-					<span className={`${styles["icon"]}`}>{icon2}</span>
-					<span className={`${styles["title"]}`}>{text2}</span>
+			<li className={`${styles["li"]}`}>
+				<a href={href2} className={`${styles["a"]}`}>
+					<span className={`${styles["icon"]} ${styles["span"]}`}>{icon2}</span>
+					<span className={`${styles["title"]} ${styles["span"]}`}>
+						{text2}
+					</span>
 				</a>
 			</li>
-			<li>
-				<a href={href3}>
-					<span className={`${styles["icon"]}`}>{icon3}</span>
-					<span className={`${styles["title"]}`}>{text3}</span>
+			<li className={`${styles["li"]}`}>
+				<a href={href3} className={`${styles["a"]}`}>
+					<span className={`${styles["icon"]} ${styles["span"]}`}>{icon3}</span>
+					<span className={`${styles["title"]} ${styles["span"]}`}>
+						{text3}
+					</span>
 				</a>
 			</li>
-			<li>
-				<a href={href4}>
-					<span className={`${styles["icon"]}`}>{icon4}</span>
-					<span className={`${styles["title"]}`}>{text4}</span>
+			<li className={`${styles["li"]}`}>
+				<a href={href4} className={`${styles["a"]}`}>
+					<span className={`${styles["icon"]} ${styles["span"]}`}>{icon4}</span>
+					<span className={`${styles["title"]} ${styles["span"]}`}>
+						{text4}
+					</span>
 				</a>
 			</li>
-			<li>
-				<a href={href5}>
-					<span className={`${styles["icon"]}`}>{icon5}</span>
-					<span className={`${styles["title"]}`}>{text5}</span>
+			<li className={`${styles["li"]}`}>
+				<a href={href5} className={`${styles["a"]}`}>
+					<span className={`${styles["icon"]} ${styles["span"]}`}>{icon5}</span>
+					<span className={`${styles["title"]} ${styles["span"]}`}>
+						{text5}
+					</span>
 				</a>
 			</li>
 		</ul>

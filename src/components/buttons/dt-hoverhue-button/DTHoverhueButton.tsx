@@ -17,8 +17,8 @@ type Props = Readonly<{
 export const DTHoverhueButton = ({ text, href, style }: Props) => {
 	return (
 		<a href={href} style={style} className={`${styles["button"]}`}>
-			<span>{text}</span>
-			<span>{text}</span>
+			<span className={`${styles["span"]}`}>{text}</span>
+			<span className={`${styles["span"]}`}>{text}</span>
 		</a>
 	)
 }
